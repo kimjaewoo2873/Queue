@@ -46,7 +46,7 @@ int is_empty(QueueType* q) {
 
 void enqueue(QueueType* q, int item) {
 	if (is_full(q)) {
-		error("Å¥°¡ Æ÷È­»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ í¬í™”ìƒíƒœìž…ë‹ˆë‹¤.");
 		return;
 	}
 	q->data[++(q->rear)] = item;
@@ -54,7 +54,7 @@ void enqueue(QueueType* q, int item) {
 
 int dequeue(QueueType* q) {
 	if (is_empty(q)) {
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 		return -1;
 	}
 	int item = q->data[++(q->front)];
